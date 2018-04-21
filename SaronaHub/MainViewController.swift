@@ -12,16 +12,11 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if let navigationController = self.navigationController {
             if let customFont = UIFont(name: "BebasNeue-Regular", size: 22) {
                 navigationController.navigationBar.titleTextAttributes = [kCTFontAttributeName: customFont] as [NSAttributedStringKey : Any]
             }
-            
         }
-//        titleTextAttributes = [NSFontAttributeName: UIFont(name: Font.mediumFontName, size: 20)!]
-        
-
     }
 
     override func didReceiveMemoryWarning() {

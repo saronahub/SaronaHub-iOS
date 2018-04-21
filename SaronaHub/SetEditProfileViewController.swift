@@ -29,6 +29,8 @@ class SetEditProfileViewController: UIViewController {
     
     @IBOutlet weak var confirmButton: UIButton!
     
+    @IBOutlet weak var profileButton: UIButton!
+    
     var profileMode: ProfileMode!
     
     override func viewDidLoad() {
@@ -70,6 +72,27 @@ class SetEditProfileViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    @IBAction func addProfileImage(_ sender: Any) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "מצלמה", style: .default, handler: { (action:UIAlertAction) in
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                imagePickerController.sourceType = .camera
+                self.present(imagePickerController, animated: true, completion: nil)
+            } else {
+                print("Camera not available")
+            }
+        }))
+        actionSheet.addAction(UIAlertAction(title: "גלריית תמונות", style: .default, handler: { (action:UIAlertAction) in
+            imagePickerController.sourceType = .photoLibrary
+            self.present(imagePickerController, animated: true, completion: nil)
+        }))
+        actionSheet.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
+        self.present(actionSheet, animated: true, completion: nil)
+    }
 }
 
 extension SetEditProfileViewController: UITextFieldDelegate {
@@ -105,4 +128,21 @@ extension SetEditProfileViewController: UITextViewDelegate {
     }
 }
 
+extension SetEditProfileViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.profileButton.setBackgroundImage(image, for: .normal)
+        } else if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            self.profileButton.setBackgroundImage(image, for: .normal)
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+}
 
+extension SetEditProfileViewController: UINavigationControllerDelegate {
+    
+}

@@ -52,6 +52,8 @@
 		<string>opensanshebrew-regular-webfont.ttf</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>על מנת לסרוק QRCode דרושה הרשאת מצלמה</string>
+	<string>$(PRODUCT_NAME) asking permission to use your camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) asking permission to open your photo library</string>
 </dict>
 </plist>
