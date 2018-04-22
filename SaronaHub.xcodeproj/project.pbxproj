@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D05E6FF200845DF00268989 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E6FE200845DF00268989 /* InitialViewController.swift */; };
 		2D05E7062009693A00268989 /* ViewControllerFadeTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E7052009693A00268989 /* ViewControllerFadeTransitions.swift */; };
+		2D0B37A1208BFD4B003B34C3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0B37A0208BFD4A003B34C3 /* ProfileViewController.swift */; };
 		2D1F84391FE199EE003DBC81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F84381FE199EE003DBC81 /* AppDelegate.swift */; };
 		2D1F843B1FE199EE003DBC81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F843A1FE199EE003DBC81 /* ViewController.swift */; };
 		2D1F843E1FE199EE003DBC81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D1F843C1FE199EE003DBC81 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		2D05E6FE200845DF00268989 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		2D05E7052009693A00268989 /* ViewControllerFadeTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFadeTransitions.swift; sourceTree = "<group>"; };
+		2D0B37A0208BFD4A003B34C3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2D1F84351FE199EE003DBC81 /* SaronaHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaronaHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1F84381FE199EE003DBC81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D1F843A1FE199EE003DBC81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				2D58862920857CA200A9B1D3 /* MainViewController.swift */,
 				2D63985120212C6100AA59D5 /* VisitsHistoryViewController.swift */,
 				2D58862320856A7800A9B1D3 /* NewVisitViewController.swift */,
+				2D0B37A0208BFD4A003B34C3 /* ProfileViewController.swift */,
 				2D1F843C1FE199EE003DBC81 /* Main.storyboard */,
 				2D1F84411FE199EE003DBC81 /* LaunchScreen.storyboard */,
 				2DB706B7201F832D001B84EA /* Assets.xcassets */,
@@ -218,6 +221,7 @@
 				2DB62F2D205E961900E54B3E /* SetEditProfileViewController.swift in Sources */,
 				2D58862420856A7800A9B1D3 /* NewVisitViewController.swift in Sources */,
 				2DFD6E8C2003D687002424D1 /* Global.swift in Sources */,
+				2D0B37A1208BFD4B003B34C3 /* ProfileViewController.swift in Sources */,
 				2DF66C36200AF4AB0052FD67 /* RegisterViewController.swift in Sources */,
 				2D05E7062009693A00268989 /* ViewControllerFadeTransitions.swift in Sources */,
 				2D05E6FF200845DF00268989 /* InitialViewController.swift in Sources */,

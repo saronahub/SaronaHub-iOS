@@ -277,7 +277,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="NDF-M4-cAF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SARONAHUB" id="0QL-8p-J5f"/>
+                    <navigationItem key="navigationItem" title="SARONAHUB" id="0QL-8p-J5f">
+                        <barButtonItem key="rightBarButtonItem" title="פרופיל" id="PGk-Yr-EUk">
+                            <connections>
+                                <segue destination="0s3-9P-7zg" kind="presentation" id="rFZ-Fg-5WY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5o-oH-Y2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -824,7 +830,7 @@
                     <view key="view" contentMode="scaleToFill" id="ZuD-Io-KFW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.34901960780000002" green="0.69803921570000005" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.51764705882352946" green="0.87058823529411766" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="B83-Vg-1mN"/>
                     </view>
                     <connections>
@@ -1009,6 +1015,177 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbY-KO-T2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="260" y="-2772.8635682158924"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bcE-8p-oVU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0s3-9P-7zg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ugc-yZ-I4T">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.50196078431372548" green="0.87058823529411766" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lNL-wO-pOb" kind="relationship" relationship="rootViewController" id="8RR-oX-EMT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Udk-4Z-cHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1792.8" y="-723.68815592203907"/>
+        </scene>
+        <!--פרופיל אישי-->
+        <scene sceneID="dyu-Sd-jpe">
+            <objects>
+                <tableViewController id="lNL-wO-pOb" customClass="ProfileTableViewController" customModule="SaronaHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xLE-Mr-fxa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.50196078431372548" green="0.87058823529411766" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection id="pcD-Hv-Ruu">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="bpT-sg-0Bs">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bpT-sg-0Bs" id="QzS-Qa-vaX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RZ6-59-Pwp">
+                                                    <rect key="frame" x="252" y="21.5" width="107" height="107"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="RZ6-59-Pwp" secondAttribute="height" id="GbE-VK-cXW"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="gqd-fI-LD3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="אסף באיבקוב" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7Uo-ba-8Iz">
+                                                    <rect key="frame" x="100" y="60.5" width="127.5" height="30"/>
+                                                    <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="RZ6-59-Pwp" secondAttribute="trailing" constant="16" id="Ax3-Rh-xse"/>
+                                                <constraint firstItem="7Uo-ba-8Iz" firstAttribute="centerY" secondItem="RZ6-59-Pwp" secondAttribute="centerY" id="Cla-BC-noF"/>
+                                                <constraint firstItem="RZ6-59-Pwp" firstAttribute="leading" secondItem="7Uo-ba-8Iz" secondAttribute="trailing" constant="24.5" id="OLj-P7-qRi"/>
+                                                <constraint firstItem="RZ6-59-Pwp" firstAttribute="centerY" secondItem="QzS-Qa-vaX" secondAttribute="centerY" id="Pse-Qq-Pie"/>
+                                                <constraint firstItem="7Uo-ba-8Iz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QzS-Qa-vaX" secondAttribute="leading" constant="16" id="Qxw-6Y-Jox"/>
+                                                <constraint firstItem="RZ6-59-Pwp" firstAttribute="width" secondItem="QzS-Qa-vaX" secondAttribute="width" multiplier="1:3.5" priority="999" id="UUE-lZ-4ti"/>
+                                                <constraint firstItem="RZ6-59-Pwp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QzS-Qa-vaX" secondAttribute="top" constant="8" id="nLt-4L-ytE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="j5d-Ah-u89">
+                                        <rect key="frame" x="0.0" y="150" width="375" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j5d-Ah-u89" id="0S8-rd-aRJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mk8-hF-ZLI">
+                                                    <rect key="frame" x="16" y="8" width="343" height="59"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כמה שעות שהייתי במרכז:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipG-aK-sJ0">
+                                                            <rect key="frame" x="194.5" y="22" width="132.5" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80 שעות" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4o-d3-UyB">
+                                                            <rect key="frame" x="16" y="20.5" width="50" height="18"/>
+                                                            <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ipG-aK-sJ0" secondAttribute="bottom" constant="4" id="1Nm-Tl-XxH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ipG-aK-sJ0" secondAttribute="trailing" constant="16" id="8Md-Ib-3SB"/>
+                                                        <constraint firstItem="ipG-aK-sJ0" firstAttribute="centerY" secondItem="Mk8-hF-ZLI" secondAttribute="centerY" id="NAJ-Ua-2gZ"/>
+                                                        <constraint firstItem="t4o-d3-UyB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Mk8-hF-ZLI" secondAttribute="top" constant="4" id="Pyh-qH-fKv"/>
+                                                        <constraint firstItem="t4o-d3-UyB" firstAttribute="leading" secondItem="Mk8-hF-ZLI" secondAttribute="leading" constant="16" id="W4P-6Q-gfb"/>
+                                                        <constraint firstItem="ipG-aK-sJ0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="t4o-d3-UyB" secondAttribute="trailing" constant="8" id="ci5-RE-6cF"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="t4o-d3-UyB" secondAttribute="bottom" constant="4" id="w62-nk-mVY"/>
+                                                        <constraint firstItem="ipG-aK-sJ0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Mk8-hF-ZLI" secondAttribute="top" constant="4" id="wP5-Ly-Zpl"/>
+                                                        <constraint firstItem="t4o-d3-UyB" firstAttribute="centerY" secondItem="Mk8-hF-ZLI" secondAttribute="centerY" id="y3h-zd-RDa"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mk8-hF-ZLI" firstAttribute="centerX" secondItem="0S8-rd-aRJ" secondAttribute="centerX" id="7ih-3f-6Zr"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mk8-hF-ZLI" secondAttribute="bottom" constant="8" id="OIC-Wo-qKm"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mk8-hF-ZLI" secondAttribute="trailing" constant="16" id="ipF-pM-vFI"/>
+                                                <constraint firstItem="Mk8-hF-ZLI" firstAttribute="top" secondItem="0S8-rd-aRJ" secondAttribute="top" constant="8" id="mve-oe-sE3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="180" id="yJl-4P-fSj">
+                                        <rect key="frame" x="0.0" y="225" width="375" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yJl-4P-fSj" id="3QW-x9-bcM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="על עצמי:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4N-3j-6ub">
+                                                    <rect key="frame" x="287.5" y="8" width="71.5" height="25"/>
+                                                    <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="שומע רגע.. בוא בוא בוא בוא" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqx-gi-wya">
+                                                    <rect key="frame" x="16" y="41" width="343" height="131"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="q4N-3j-6ub" firstAttribute="top" secondItem="3QW-x9-bcM" secondAttribute="top" constant="8" id="ROl-wp-V8I"/>
+                                                <constraint firstAttribute="bottom" secondItem="cqx-gi-wya" secondAttribute="bottom" constant="8" id="Smp-su-fkA"/>
+                                                <constraint firstItem="cqx-gi-wya" firstAttribute="centerX" secondItem="3QW-x9-bcM" secondAttribute="centerX" id="fNj-CY-VOu"/>
+                                                <constraint firstAttribute="trailing" secondItem="q4N-3j-6ub" secondAttribute="trailing" constant="16" id="qjx-Gw-KwD"/>
+                                                <constraint firstItem="cqx-gi-wya" firstAttribute="top" secondItem="q4N-3j-6ub" secondAttribute="bottom" constant="8" id="wER-cI-2ir"/>
+                                                <constraint firstAttribute="trailing" secondItem="cqx-gi-wya" secondAttribute="trailing" constant="16" id="xIk-rw-rzH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="lNL-wO-pOb" id="kF3-UF-A5l"/>
+                            <outlet property="delegate" destination="lNL-wO-pOb" id="n6u-lu-SK3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="פרופיל אישי" id="HYd-Gw-lS7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="WD3-Gc-Cfv">
+                            <connections>
+                                <action selector="close:" destination="lNL-wO-pOb" id="QpL-mN-WFj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="עריכה" id="sZ0-g2-lqE"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="aboutMeTextView" destination="cqx-gi-wya" id="LKn-LB-SsU"/>
+                        <outlet property="hoursParentView" destination="Mk8-hF-ZLI" id="xu3-gw-PfY"/>
+                        <outlet property="profileImageView" destination="RZ6-59-Pwp" id="gf4-jx-wU3"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ETe-Z6-AJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2618" y="-723"/>
         </scene>
     </scenes>
     <resources>
