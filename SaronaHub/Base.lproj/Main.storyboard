@@ -260,7 +260,7 @@
                         <segue destination="MzZ-Ad-CxV" kind="relationship" relationship="viewControllers" id="M5Q-Vl-ksK"/>
                         <segue destination="eWn-Lj-T9J" kind="relationship" relationship="viewControllers" id="rAr-dc-M4v"/>
                         <segue destination="9Ly-zF-BuN" kind="relationship" relationship="viewControllers" id="Ulp-u0-Ho0"/>
-                        <segue destination="3g9-hE-2Mb" kind="relationship" relationship="viewControllers" id="BSg-bB-iSN"/>
+                        <segue destination="Mqq-eY-76E" kind="relationship" relationship="viewControllers" id="tK6-Nh-gan"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYt-bu-3BC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -826,6 +826,7 @@
         <!--Initial View Controller-->
         <scene sceneID="jO4-5T-NBu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZl-Jj-OCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="EC2-oC-DHC" customClass="InitialViewController" customModule="SaronaHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZuD-Io-KFW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -839,7 +840,6 @@
                         <segue destination="ien-gr-QD7" kind="presentation" identifier="SetProfile" id="IoW-mQ-8Ji"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PZl-Jj-OCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1346" y="-399"/>
         </scene>
@@ -865,21 +865,90 @@
             </objects>
             <point key="canvasLocation" x="-524" y="-63"/>
         </scene>
-        <!--לו״ז המרכז-->
-        <scene sceneID="wyF-6k-hUU">
+        <!--Navigation Controller-->
+        <scene sceneID="bxM-dE-IIf">
             <objects>
-                <viewController id="HKT-GX-esF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PpU-7H-qtO">
+                <navigationController id="Mqq-eY-76E" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Calander (Unselected)" selectedImage="Calander (Selected)" id="kIX-KL-Hdx">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fjV-3G-r7s">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sR6-tA-CTh" kind="relationship" relationship="rootViewController" id="fdU-TA-fgl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWp-uV-fF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="-2774"/>
+        </scene>
+        <!--לו״ז המרכז-->
+        <scene sceneID="4Va-QQ-I54">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="sR6-tA-CTh" customClass="SchedulePagerTabStripViewController" customModule="SaronaHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ML5-EG-eG5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="QKv-GF-O4e"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C0T-4J-2qS" customClass="ButtonBarView" customModule="SaronaHub" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ImU-b0-grq"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ukC-tb-IWX">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhu-yo-vw0">
+                                <rect key="frame" x="0.0" y="124" width="375" height="494"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C0T-4J-2qS" firstAttribute="leading" secondItem="Igr-us-Ybt" secondAttribute="leading" id="2GW-A3-Bad"/>
+                            <constraint firstItem="Igr-us-Ybt" firstAttribute="bottom" secondItem="qhu-yo-vw0" secondAttribute="bottom" id="2iI-tg-ZxX"/>
+                            <constraint firstItem="Igr-us-Ybt" firstAttribute="trailing" secondItem="C0T-4J-2qS" secondAttribute="trailing" id="EuX-rz-i93"/>
+                            <constraint firstItem="qhu-yo-vw0" firstAttribute="top" secondItem="C0T-4J-2qS" secondAttribute="bottom" id="GDC-GA-Z4w"/>
+                            <constraint firstItem="C0T-4J-2qS" firstAttribute="top" secondItem="Igr-us-Ybt" secondAttribute="top" id="Rcv-29-cSm"/>
+                            <constraint firstItem="Igr-us-Ybt" firstAttribute="trailing" secondItem="qhu-yo-vw0" secondAttribute="trailing" id="qcr-iY-Nl2"/>
+                            <constraint firstItem="qhu-yo-vw0" firstAttribute="leading" secondItem="Igr-us-Ybt" secondAttribute="leading" id="rCI-W1-d1T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Igr-us-Ybt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="לו״ז המרכז" id="beI-U4-JXL"/>
+                    <navigationItem key="navigationItem" title="לו״ז המרכז" id="oE6-fW-rcz"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="C0T-4J-2qS" id="P2t-Vx-Re9"/>
+                        <outlet property="containerView" destination="qhu-yo-vw0" id="98b-r6-CS9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nc0-BF-tIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vP4-Cz-4nF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="-2773"/>
+            <point key="canvasLocation" x="1022" y="-2775"/>
+        </scene>
+        <!--Room Events View Controller-->
+        <scene sceneID="vNM-cv-dvk">
+            <objects>
+                <viewController storyboardIdentifier="RoomEvents" id="8Jc-LQ-6oT" customClass="RoomEventsViewController" customModule="SaronaHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b9g-GH-UfM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cFE-wA-E1A"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPB-YR-ea7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="-2775"/>
         </scene>
         <!--תמונות-->
         <scene sceneID="FCW-OT-ygS">
@@ -991,30 +1060,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lpz-B0-oOV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="260" y="-2087.4062968515746"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="U9C-kg-mcr">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3g9-hE-2Mb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Calander (Unselected)" selectedImage="Calander (Selected)" id="pn1-hN-5Rq">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WEP-CK-RhS">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="17"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="HKT-GX-esF" kind="relationship" relationship="rootViewController" id="DsT-fI-sOv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AbY-KO-T2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="260" y="-2772.8635682158924"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bcE-8p-oVU">
@@ -1151,6 +1196,7 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="q4N-3j-6ub" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cqx-gi-wya" secondAttribute="leading" id="7DZ-zA-muZ"/>
                                                 <constraint firstItem="q4N-3j-6ub" firstAttribute="top" secondItem="3QW-x9-bcM" secondAttribute="top" constant="8" id="ROl-wp-V8I"/>
                                                 <constraint firstAttribute="bottom" secondItem="cqx-gi-wya" secondAttribute="bottom" constant="8" id="Smp-su-fkA"/>
                                                 <constraint firstItem="cqx-gi-wya" firstAttribute="centerX" secondItem="3QW-x9-bcM" secondAttribute="centerX" id="fNj-CY-VOu"/>

@@ -20,6 +20,13 @@
 		2D63985220212C6100AA59D5 /* VisitsHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D63985120212C6100AA59D5 /* VisitsHistoryViewController.swift */; };
 		2DB62F2D205E961900E54B3E /* SetEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB62F2C205E961900E54B3E /* SetEditProfileViewController.swift */; };
 		2DB706B8201F832D001B84EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DB706B7201F832D001B84EA /* Assets.xcassets */; };
+		2DD2A432208E935A003F40F8 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A42D208E9359003F40F8 /* ButtonBarPagerTabStripViewController.swift */; };
+		2DD2A433208E935A003F40F8 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A42E208E9359003F40F8 /* ButtonBarView.swift */; };
+		2DD2A434208E935A003F40F8 /* ViewControllerForPagerTabStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A42F208E9359003F40F8 /* ViewControllerForPagerTabStrip.swift */; };
+		2DD2A435208E935A003F40F8 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD2A430208E935A003F40F8 /* ButtonCell.xib */; };
+		2DD2A436208E935A003F40F8 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A431208E935A003F40F8 /* PagerTabStripViewController.swift */; };
+		2DD2A439208E93AC003F40F8 /* SchedulePagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A438208E93AC003F40F8 /* SchedulePagerTabStripViewController.swift */; };
+		2DD2A43B208E93F8003F40F8 /* RoomEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A43A208E93F8003F40F8 /* RoomEventsViewController.swift */; };
 		2DF66C36200AF4AB0052FD67 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF66C35200AF4AB0052FD67 /* RegisterViewController.swift */; };
 		2DFD6E8220039588002424D1 /* OpenSansHebrew-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD6E7A20039585002424D1 /* OpenSansHebrew-LightItalic.ttf */; };
 		2DFD6E8320039588002424D1 /* OpenSansHebrew-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD6E7B20039585002424D1 /* OpenSansHebrew-Italic.ttf */; };
@@ -48,6 +55,13 @@
 		2D63985120212C6100AA59D5 /* VisitsHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitsHistoryViewController.swift; sourceTree = "<group>"; };
 		2DB62F2C205E961900E54B3E /* SetEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEditProfileViewController.swift; sourceTree = "<group>"; };
 		2DB706B7201F832D001B84EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DD2A42D208E9359003F40F8 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		2DD2A42E208E9359003F40F8 /* ButtonBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarView.swift; sourceTree = "<group>"; };
+		2DD2A42F208E9359003F40F8 /* ViewControllerForPagerTabStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerForPagerTabStrip.swift; sourceTree = "<group>"; };
+		2DD2A430208E935A003F40F8 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		2DD2A431208E935A003F40F8 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripViewController.swift; sourceTree = "<group>"; };
+		2DD2A438208E93AC003F40F8 /* SchedulePagerTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePagerTabStripViewController.swift; sourceTree = "<group>"; };
+		2DD2A43A208E93F8003F40F8 /* RoomEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomEventsViewController.swift; sourceTree = "<group>"; };
 		2DF66C35200AF4AB0052FD67 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2DFD6E7A20039585002424D1 /* OpenSansHebrew-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-LightItalic.ttf"; sourceTree = "<group>"; };
 		2DFD6E7B20039585002424D1 /* OpenSansHebrew-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-Italic.ttf"; sourceTree = "<group>"; };
@@ -107,15 +121,30 @@
 				2D63985120212C6100AA59D5 /* VisitsHistoryViewController.swift */,
 				2D58862320856A7800A9B1D3 /* NewVisitViewController.swift */,
 				2D0B37A0208BFD4A003B34C3 /* ProfileViewController.swift */,
+				2DD2A438208E93AC003F40F8 /* SchedulePagerTabStripViewController.swift */,
+				2DD2A43A208E93F8003F40F8 /* RoomEventsViewController.swift */,
 				2D1F843C1FE199EE003DBC81 /* Main.storyboard */,
 				2D1F84411FE199EE003DBC81 /* LaunchScreen.storyboard */,
 				2DB706B7201F832D001B84EA /* Assets.xcassets */,
 				2D1F84441FE199EE003DBC81 /* Info.plist */,
 				2DFD6E8B2003D687002424D1 /* Global.swift */,
+				2DD2A437208E9364003F40F8 /* PagerTabStrip */,
 				2D05E7042009664300268989 /* ViewControllersTransition */,
 				2DFD6E8A2003C52A002424D1 /* Fonts */,
 			);
 			path = SaronaHub;
+			sourceTree = "<group>";
+		};
+		2DD2A437208E9364003F40F8 /* PagerTabStrip */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2A42D208E9359003F40F8 /* ButtonBarPagerTabStripViewController.swift */,
+				2DD2A42E208E9359003F40F8 /* ButtonBarView.swift */,
+				2DD2A430208E935A003F40F8 /* ButtonCell.xib */,
+				2DD2A431208E935A003F40F8 /* PagerTabStripViewController.swift */,
+				2DD2A42F208E9359003F40F8 /* ViewControllerForPagerTabStrip.swift */,
+			);
+			path = PagerTabStrip;
 			sourceTree = "<group>";
 		};
 		2DFD6E8A2003C52A002424D1 /* Fonts */ = {
@@ -195,6 +224,7 @@
 			files = (
 				2DFD6E8420039588002424D1 /* OpenSansHebrew-ExtraBoldItalic.ttf in Resources */,
 				2DFD6E8820039588002424D1 /* OpenSansHebrew-BoldItalic.ttf in Resources */,
+				2DD2A435208E935A003F40F8 /* ButtonCell.xib in Resources */,
 				2D58862820857C2900A9B1D3 /* BebasNeue-Regular.ttf in Resources */,
 				2DB706B8201F832D001B84EA /* Assets.xcassets in Resources */,
 				2D1F84431FE199EE003DBC81 /* LaunchScreen.storyboard in Resources */,
@@ -215,11 +245,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD2A436208E935A003F40F8 /* PagerTabStripViewController.swift in Sources */,
 				2D1F843B1FE199EE003DBC81 /* ViewController.swift in Sources */,
 				2D1F84391FE199EE003DBC81 /* AppDelegate.swift in Sources */,
 				2D63985220212C6100AA59D5 /* VisitsHistoryViewController.swift in Sources */,
+				2DD2A433208E935A003F40F8 /* ButtonBarView.swift in Sources */,
 				2DB62F2D205E961900E54B3E /* SetEditProfileViewController.swift in Sources */,
 				2D58862420856A7800A9B1D3 /* NewVisitViewController.swift in Sources */,
+				2DD2A432208E935A003F40F8 /* ButtonBarPagerTabStripViewController.swift in Sources */,
+				2DD2A43B208E93F8003F40F8 /* RoomEventsViewController.swift in Sources */,
+				2DD2A439208E93AC003F40F8 /* SchedulePagerTabStripViewController.swift in Sources */,
+				2DD2A434208E935A003F40F8 /* ViewControllerForPagerTabStrip.swift in Sources */,
 				2DFD6E8C2003D687002424D1 /* Global.swift in Sources */,
 				2D0B37A1208BFD4B003B34C3 /* ProfileViewController.swift in Sources */,
 				2DF66C36200AF4AB0052FD67 /* RegisterViewController.swift in Sources */,
