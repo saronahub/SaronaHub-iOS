@@ -50,3 +50,23 @@ class SchedulePagerTabStripViewController: ButtonBarPagerTabStripViewController 
         return viewControllersForPagerTabStrip
     }
 }
+
+class ButtonWithImage: UIButton {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if let imageView = imageView {
+            self.contentHorizontalAlignment = .right
+            let space: CGFloat = 16
+            imageEdgeInsets = UIEdgeInsets(top: 0, left: (bounds.width - imageView.bounds.width - space), bottom: 0, right: space)
+            titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: imageView.bounds.width + space*2)
+        }
+    }
+}
+
+
+
+
+
+
+
+

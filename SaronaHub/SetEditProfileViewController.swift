@@ -52,13 +52,16 @@ class SetEditProfileViewController: UIViewController {
         self.confirmButton.layer.cornerRadius = 10
         
         if self.profileMode == .edit {
-            let close = UIBarButtonItem(barButtonSystemItem: .stop, target: nil, action: nil)
+            let close = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(SetEditProfileViewController.close))
             close.tintColor = UIColor.black
             self.navigationItem.leftBarButtonItem = close
             self.confirmButton.setTitle("שמור", for: .normal)
         }
     }
     
+    @objc func close() {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func confirm(_ sender: Any) {
         if self.profileMode == .set {

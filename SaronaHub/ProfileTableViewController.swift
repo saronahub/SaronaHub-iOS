@@ -8,36 +8,6 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-
-    @IBOutlet weak var profileImageView: UIImageView!
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        if let navigationController = self.navigationController {
-            navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-            navigationController.navigationBar.shadowImage = UIImage()
-        }
-        if let rightBarButtonItem = self.navigationItem.rightBarButtonItem, let font = UIFont(name: "OpenSansHebrew-Bold", size: 14) {
-            rightBarButtonItem.setTitleTextAttributes([kCTFontAttributeName as NSAttributedStringKey: font], for: .normal)
-        }
-    }
-    
-    override func viewDidLayoutSubviews() {
-        let imageViewCornerRadius = min(self.profileImageView.bounds.width, self.profileImageView.bounds.width)/2
-        self.profileImageView.layer.masksToBounds = true
-        self.profileImageView.layer.cornerRadius = imageViewCornerRadius
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-}
-
 class ProfileTableViewController: UITableViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -55,6 +25,7 @@ class ProfileTableViewController: UITableViewController {
         }
         if let rightBarButtonItem = self.navigationItem.rightBarButtonItem, let font = UIFont(name: "OpenSansHebrew-Bold", size: 14) {
             rightBarButtonItem.setTitleTextAttributes([kCTFontAttributeName as NSAttributedStringKey: font], for: .normal)
+            rightBarButtonItem.setTitleTextAttributes([kCTFontAttributeName as NSAttributedStringKey: font], for: .highlighted)
         }
         if let font = UIFont(name: "OpenSansHebrew-Regular", size: 14) {
             self.aboutMeTextView.font = font
@@ -75,6 +46,14 @@ class ProfileTableViewController: UITableViewController {
         self.aboutMeTextView.layer.cornerRadius = 10
         self.aboutMeTextView.layer.borderWidth = 2
         self.aboutMeTextView.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditProfile",
+            let navigationController = segue.destination as? UINavigationController,
+            let editProfileViewController = navigationController.viewControllers.first as? SetEditProfileViewController {
+            editProfileViewController.profileMode = .edit
+        }
     }
 
     @IBAction func close(_ sender: Any) {

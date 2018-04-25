@@ -826,7 +826,6 @@
         <!--Initial View Controller-->
         <scene sceneID="jO4-5T-NBu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PZl-Jj-OCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="EC2-oC-DHC" customClass="InitialViewController" customModule="SaronaHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZuD-Io-KFW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -840,6 +839,7 @@
                         <segue destination="ien-gr-QD7" kind="presentation" identifier="SetProfile" id="IoW-mQ-8Ji"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZl-Jj-OCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1346" y="-399"/>
         </scene>
@@ -910,18 +910,33 @@
                                 <cells/>
                             </collectionView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhu-yo-vw0">
-                                <rect key="frame" x="0.0" y="124" width="375" height="494"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="454"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXY-Ir-WG7" customClass="ButtonWithImage" customModule="SaronaHub" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="124" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.56078431370000004" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Omw-yH-zQx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="12"/>
+                                <state key="normal" title="הוסף/י אירוע חדש" image="Add Event"/>
+                                <state key="highlighted" title="הוסף/י אירוע חדש">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="C0T-4J-2qS" firstAttribute="leading" secondItem="Igr-us-Ybt" secondAttribute="leading" id="2GW-A3-Bad"/>
                             <constraint firstItem="Igr-us-Ybt" firstAttribute="bottom" secondItem="qhu-yo-vw0" secondAttribute="bottom" id="2iI-tg-ZxX"/>
+                            <constraint firstItem="qhu-yo-vw0" firstAttribute="top" secondItem="RXY-Ir-WG7" secondAttribute="bottom" id="8Ku-nv-oYz"/>
                             <constraint firstItem="Igr-us-Ybt" firstAttribute="trailing" secondItem="C0T-4J-2qS" secondAttribute="trailing" id="EuX-rz-i93"/>
-                            <constraint firstItem="qhu-yo-vw0" firstAttribute="top" secondItem="C0T-4J-2qS" secondAttribute="bottom" id="GDC-GA-Z4w"/>
+                            <constraint firstItem="RXY-Ir-WG7" firstAttribute="top" secondItem="C0T-4J-2qS" secondAttribute="bottom" id="HIt-OW-e2W"/>
                             <constraint firstItem="C0T-4J-2qS" firstAttribute="top" secondItem="Igr-us-Ybt" secondAttribute="top" id="Rcv-29-cSm"/>
+                            <constraint firstItem="RXY-Ir-WG7" firstAttribute="leading" secondItem="Igr-us-Ybt" secondAttribute="leading" id="nLV-PB-eXe"/>
                             <constraint firstItem="Igr-us-Ybt" firstAttribute="trailing" secondItem="qhu-yo-vw0" secondAttribute="trailing" id="qcr-iY-Nl2"/>
                             <constraint firstItem="qhu-yo-vw0" firstAttribute="leading" secondItem="Igr-us-Ybt" secondAttribute="leading" id="rCI-W1-d1T"/>
+                            <constraint firstItem="Igr-us-Ybt" firstAttribute="trailing" secondItem="RXY-Ir-WG7" secondAttribute="trailing" id="y7U-Cz-trG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Igr-us-Ybt"/>
                     </view>
@@ -933,7 +948,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vP4-Cz-4nF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="-2775"/>
+            <point key="canvasLocation" x="1021.6" y="-2775.562218890555"/>
         </scene>
         <!--Room Events View Controller-->
         <scene sceneID="vNM-cv-dvk">
@@ -942,7 +957,6 @@
                     <view key="view" contentMode="scaleToFill" id="b9g-GH-UfM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cFE-wA-E1A"/>
                     </view>
                 </viewController>
@@ -1221,7 +1235,11 @@
                                 <action selector="close:" destination="lNL-wO-pOb" id="QpL-mN-WFj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="עריכה" id="sZ0-g2-lqE"/>
+                        <barButtonItem key="rightBarButtonItem" title="עריכה" id="sZ0-g2-lqE">
+                            <connections>
+                                <segue destination="ien-gr-QD7" kind="show" identifier="EditProfile" id="KPJ-I1-T7V"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="aboutMeTextView" destination="cqx-gi-wya" id="LKn-LB-SsU"/>
@@ -1235,6 +1253,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add Event" width="20" height="20"/>
         <image name="Calander (Selected)" width="31" height="30"/>
         <image name="Calander (Unselected)" width="31" height="30"/>
         <image name="History Visited (Selected)" width="31" height="31"/>
@@ -1246,4 +1265,7 @@
         <image name="add_profile_pic_plus" width="16" height="16"/>
         <image name="top_logo" width="109" height="98"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KPJ-I1-T7V"/>
+    </inferredMetricsTieBreakers>
 </document>
