@@ -197,18 +197,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnF-qX-9ZF">
-                                <rect key="frame" x="0.0" y="233" width="375" height="375"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="DnF-qX-9ZF" secondAttribute="height" id="nQz-91-0To"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lA5-Rq-6bt">
-                                <rect key="frame" x="0.0" y="64" width="375" height="169"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYP-DU-GIm">
+                                <rect key="frame" x="0.0" y="64" width="375" height="167"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="סרוק את הברקוד בכניסתך ויציאתך מהמתחם." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6st-Sd-ZOK">
-                                        <rect key="frame" x="62.5" y="55" width="251" height="60"/>
+                                        <rect key="frame" x="62" y="53.5" width="251" height="60"/>
                                         <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -216,24 +209,31 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="6st-Sd-ZOK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lA5-Rq-6bt" secondAttribute="leading" constant="8" id="3Ld-0b-3vD"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6st-Sd-ZOK" secondAttribute="trailing" constant="8" id="JyF-dO-rQJ"/>
-                                    <constraint firstItem="6st-Sd-ZOK" firstAttribute="centerY" secondItem="lA5-Rq-6bt" secondAttribute="centerY" id="LAF-vH-JTj"/>
-                                    <constraint firstItem="6st-Sd-ZOK" firstAttribute="centerX" secondItem="lA5-Rq-6bt" secondAttribute="centerX" id="M4P-o7-na4"/>
-                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6st-Sd-ZOK" secondAttribute="bottom" constant="4" id="beH-kP-4dk"/>
-                                    <constraint firstItem="6st-Sd-ZOK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lA5-Rq-6bt" secondAttribute="top" constant="4" id="jQs-w1-LeB"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6st-Sd-ZOK" secondAttribute="bottom" constant="8" id="BYI-cj-oSF"/>
+                                    <constraint firstItem="6st-Sd-ZOK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rYP-DU-GIm" secondAttribute="leading" constant="8" id="ZJr-JL-USu"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6st-Sd-ZOK" secondAttribute="trailing" constant="8" id="egf-6o-3iv"/>
+                                    <constraint firstItem="6st-Sd-ZOK" firstAttribute="centerX" secondItem="rYP-DU-GIm" secondAttribute="centerX" id="ezt-Fg-NCQ"/>
+                                    <constraint firstItem="6st-Sd-ZOK" firstAttribute="centerY" secondItem="rYP-DU-GIm" secondAttribute="centerY" id="p0P-mD-E5p"/>
+                                    <constraint firstItem="6st-Sd-ZOK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rYP-DU-GIm" secondAttribute="top" constant="8" id="q2U-T9-82w"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnF-qX-9ZF">
+                                <rect key="frame" x="47" y="259.5" width="281.5" height="281"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DnF-qX-9ZF" secondAttribute="height" multiplier="1:1" id="OY8-8v-kcC"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8cS-cm-5Yu" firstAttribute="bottom" secondItem="DnF-qX-9ZF" secondAttribute="bottom" constant="10" id="76e-tx-m3G"/>
-                            <constraint firstItem="DnF-qX-9ZF" firstAttribute="width" secondItem="6X3-b2-If5" secondAttribute="width" id="bov-n7-khb"/>
-                            <constraint firstItem="DnF-qX-9ZF" firstAttribute="centerX" secondItem="6X3-b2-If5" secondAttribute="centerX" id="cFB-5g-Ggn"/>
-                            <constraint firstItem="lA5-Rq-6bt" firstAttribute="top" secondItem="8cS-cm-5Yu" secondAttribute="top" id="due-ge-h7U"/>
-                            <constraint firstItem="8cS-cm-5Yu" firstAttribute="trailing" secondItem="lA5-Rq-6bt" secondAttribute="trailing" id="uNw-gk-cTV"/>
-                            <constraint firstItem="lA5-Rq-6bt" firstAttribute="leading" secondItem="8cS-cm-5Yu" secondAttribute="leading" id="v03-05-ary"/>
-                            <constraint firstItem="DnF-qX-9ZF" firstAttribute="top" secondItem="lA5-Rq-6bt" secondAttribute="bottom" id="yFi-w9-eww"/>
+                            <constraint firstAttribute="centerY" secondItem="DnF-qX-9ZF" secondAttribute="centerY" multiplier="5:6" id="0hQ-z6-7bD"/>
+                            <constraint firstItem="rYP-DU-GIm" firstAttribute="top" secondItem="8cS-cm-5Yu" secondAttribute="top" id="LLD-23-zTW"/>
+                            <constraint firstItem="rYP-DU-GIm" firstAttribute="trailing" secondItem="8cS-cm-5Yu" secondAttribute="trailing" id="P1R-wk-Aye"/>
+                            <constraint firstItem="DnF-qX-9ZF" firstAttribute="width" secondItem="6X3-b2-If5" secondAttribute="width" multiplier="3:4" id="RJf-Yz-RzI"/>
+                            <constraint firstItem="DnF-qX-9ZF" firstAttribute="centerX" secondItem="6X3-b2-If5" secondAttribute="centerX" id="rA8-1Y-pGv"/>
+                            <constraint firstItem="rYP-DU-GIm" firstAttribute="leading" secondItem="8cS-cm-5Yu" secondAttribute="leading" id="sl8-68-XBm"/>
+                            <constraint firstItem="rYP-DU-GIm" firstAttribute="height" secondItem="6X3-b2-If5" secondAttribute="height" multiplier="1:4" id="zHV-eH-TVN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8cS-cm-5Yu"/>
                     </view>
