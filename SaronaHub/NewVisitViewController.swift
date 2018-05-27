@@ -15,7 +15,7 @@ class NewVisitViewController: UIViewController {
     @IBOutlet weak var qrCodeFrameView: UIView!
     
     var captureSession = AVCaptureSession()
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer!
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera, .builtInTelephotoCamera, .builtInWideAngleCamera],
                                                                   mediaType: AVMediaType.video,
                                                                   position: .back)
@@ -33,15 +33,17 @@ class NewVisitViewController: UIViewController {
                 print("error")
             }
             self.videoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
-            self.videoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            self.videoPreviewLayer!.videoGravity = AVLayerVideoGravity.resizeAspectFill
         } else {
             print("Failed to get the camera device")
         }
     }
     
     override func viewDidLayoutSubviews() {
-        self.videoPreviewLayer.frame = self.qrCodeFrameView.bounds
-        self.qrCodeFrameView.layer.addSublayer(self.videoPreviewLayer)
+        if let videoPreviewLayer = self.videoPreviewLayer {
+            videoPreviewLayer.frame = self.qrCodeFrameView.bounds
+            self.qrCodeFrameView.layer.addSublayer(videoPreviewLayer)
+        }
         self.qrCodeFrameView.clipsToBounds = true
         self.qrCodeFrameView.layer.cornerRadius = 20
         self.captureSession.startRunning()
