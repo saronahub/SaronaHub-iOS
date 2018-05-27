@@ -40,6 +40,8 @@ class NewVisitViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        self.qrCodeFrameView.layer.borderWidth = 5
+        self.qrCodeFrameView.layer.borderColor = UIColor.black.cgColor
         if let videoPreviewLayer = self.videoPreviewLayer {
             videoPreviewLayer.frame = self.qrCodeFrameView.bounds
             self.qrCodeFrameView.layer.addSublayer(videoPreviewLayer)
