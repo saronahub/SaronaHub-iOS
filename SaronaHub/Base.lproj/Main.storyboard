@@ -678,7 +678,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNx-Fm-OXI">
-                                                    <rect key="frame" x="0.0" y="8" width="288" height="36"/>
+                                                    <rect key="frame" x="0.0" y="8" width="288" height="39"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="17"/>
                                                     <state key="normal" title="הירשם">
@@ -686,7 +686,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlG-Ek-aVw">
-                                                    <rect key="frame" x="8" y="52" width="272" height="30"/>
+                                                    <rect key="frame" x="8" y="55" width="272" height="27"/>
                                                     <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="14"/>
                                                     <state key="normal" title="יש לך כבר משתמש? התחבר">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -694,7 +694,8 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="UlG-Ek-aVw" firstAttribute="top" secondItem="BNx-Fm-OXI" secondAttribute="bottom" constant="8" id="Aid-Ce-Ywf"/>
+                                                <constraint firstItem="UlG-Ek-aVw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BNx-Fm-OXI" secondAttribute="bottom" constant="8" id="Aid-Ce-Ywf"/>
+                                                <constraint firstItem="BNx-Fm-OXI" firstAttribute="height" secondItem="lPX-pa-Jcv" secondAttribute="height" multiplier="1:2.3" priority="999" id="GfP-cX-nwR"/>
                                                 <constraint firstItem="UlG-Ek-aVw" firstAttribute="leading" secondItem="lPX-pa-Jcv" secondAttribute="leading" constant="8" id="QbV-dv-gfA"/>
                                                 <constraint firstItem="BNx-Fm-OXI" firstAttribute="top" secondItem="lPX-pa-Jcv" secondAttribute="top" constant="8" id="ZDW-fQ-oNh"/>
                                                 <constraint firstAttribute="trailing" secondItem="UlG-Ek-aVw" secondAttribute="trailing" constant="8" id="g6A-xW-MQJ"/>

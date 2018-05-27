@@ -11,7 +11,7 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    let placeholders = ["הקלד שם משתמש", "הקלד דואר אלקטרוני", "הקלד סיסמא", "אימות סיסמא", "מספר פלאפון (אופציונלי)"]
+    let placeholders = ["הקלד שם משתמש", "הקלד דואר אלקטרוני", "הקלד סיסמא", "אימות סיסמא", "מספר פלאפון"]
     
     var activeTextField: UITextField?
     var endEditTextField: UITextField?
@@ -32,7 +32,7 @@ class RegisterViewController: UIViewController {
         var phoneNumber: String?
         
         func textFromTextFieldCell(row: Int) -> String? {
-            guard let acell = self.tableView.cellForRow(at: IndexPath(row: 0, section: 0)),
+            guard let acell = self.tableView.cellForRow(at: IndexPath(row: row, section: 0)),
                   let cell = acell as? TextFieldCell,
                   let text = cell.textField.text else { return nil }
             return text
@@ -42,7 +42,7 @@ class RegisterViewController: UIViewController {
         mail = textFromTextFieldCell(row: 1)
         password = textFromTextFieldCell(row: 2)
         confirmPassword = textFromTextFieldCell(row: 3)
-        phoneNumber = textFromTextFieldCell(row: 3)
+        phoneNumber = textFromTextFieldCell(row: 4)
         
         self.navigationController!.popViewController(animated: true)
     }
