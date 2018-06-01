@@ -20,6 +20,7 @@
 		2D63985220212C6100AA59D5 /* VisitsHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D63985120212C6100AA59D5 /* VisitsHistoryViewController.swift */; };
 		2DB62F2D205E961900E54B3E /* SetEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB62F2C205E961900E54B3E /* SetEditProfileViewController.swift */; };
 		2DB706B8201F832D001B84EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DB706B7201F832D001B84EA /* Assets.xcassets */; };
+		2DCBBBB520BED87000BEB20F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBBB420BED87000BEB20F /* SwiftyJSON.swift */; };
 		2DD2A432208E935A003F40F8 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A42D208E9359003F40F8 /* ButtonBarPagerTabStripViewController.swift */; };
 		2DD2A433208E935A003F40F8 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A42E208E9359003F40F8 /* ButtonBarView.swift */; };
 		2DD2A434208E935A003F40F8 /* ViewControllerForPagerTabStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A42F208E9359003F40F8 /* ViewControllerForPagerTabStrip.swift */; };
@@ -55,6 +56,7 @@
 		2D63985120212C6100AA59D5 /* VisitsHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitsHistoryViewController.swift; sourceTree = "<group>"; };
 		2DB62F2C205E961900E54B3E /* SetEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEditProfileViewController.swift; sourceTree = "<group>"; };
 		2DB706B7201F832D001B84EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DCBBBB420BED87000BEB20F /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		2DD2A42D208E9359003F40F8 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		2DD2A42E208E9359003F40F8 /* ButtonBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarView.swift; sourceTree = "<group>"; };
 		2DD2A42F208E9359003F40F8 /* ViewControllerForPagerTabStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerForPagerTabStrip.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				2DD2A437208E9364003F40F8 /* PagerTabStrip */,
 				2D05E7042009664300268989 /* ViewControllersTransition */,
 				2DFD6E8A2003C52A002424D1 /* Fonts */,
+				2DCBBBB420BED87000BEB20F /* SwiftyJSON.swift */,
 			);
 			path = SaronaHub;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				2D0B37A1208BFD4B003B34C3 /* ProfileTableViewController.swift in Sources */,
 				2DF66C36200AF4AB0052FD67 /* RegisterViewController.swift in Sources */,
 				2D05E7062009693A00268989 /* ViewControllerFadeTransitions.swift in Sources */,
+				2DCBBBB520BED87000BEB20F /* SwiftyJSON.swift in Sources */,
 				2D05E6FF200845DF00268989 /* InitialViewController.swift in Sources */,
 				2D58862A20857CA200A9B1D3 /* MainViewController.swift in Sources */,
 			);

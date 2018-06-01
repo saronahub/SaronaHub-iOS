@@ -51,6 +51,11 @@
 		<string>opensanshebrew-lightitalic-webfont.ttf</string>
 		<string>opensanshebrew-regular-webfont.ttf</string>
 	</array>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) asking permission to use your camera</string>
 	<key>NSPhotoLibraryUsageDescription</key>

@@ -35,14 +35,17 @@ class SchedulePagerTabStripViewController: ButtonBarPagerTabStripViewController 
         if let storyboard = self.storyboard {
             if let openSpaceViewController = storyboard.instantiateViewController(withIdentifier: "RoomEvents") as? RoomEventsViewController {
                 openSpaceViewController.itemInfo.title = "המרחב הפתוח"
+                openSpaceViewController.roomType = .openSpace
                 viewControllersForPagerTabStrip.append(openSpaceViewController)
             }
             if let aquariumViewController = storyboard.instantiateViewController(withIdentifier: "RoomEvents") as? RoomEventsViewController {
                 aquariumViewController.itemInfo.title = "האקווריום"
+                aquariumViewController.roomType = .aquarium
                 viewControllersForPagerTabStrip.append(aquariumViewController)
             }
             if let venturesRoomViewController = storyboard.instantiateViewController(withIdentifier: "RoomEvents") as? RoomEventsViewController {
                 venturesRoomViewController.itemInfo.title = "חדר המיזמים"
+                venturesRoomViewController.roomType = .ventures
                 viewControllersForPagerTabStrip.append(venturesRoomViewController)
             }
         }
