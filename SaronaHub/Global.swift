@@ -23,8 +23,10 @@ public func request(method: RequestMethod, _ endpoint: String, with dict: [Strin
     switch method {
     case .get:
         request.httpMethod = "GET"
+        break
     case .post:
         request.httpMethod = "POST"
+        break
     }
     // insert json data to the request
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
