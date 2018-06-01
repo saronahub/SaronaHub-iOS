@@ -119,6 +119,15 @@ class RoomEventsViewController: ViewControllerForPagerTabStrip {
             }
         }) { (error) in
             print(error)
+            DispatchQueue.main.async {
+                let alertController: UIAlertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
+                    if let refreshControl = self.tableView.refreshControl {
+                        refreshControl.endRefreshing()
+                    }
+                }))
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
     }
     
