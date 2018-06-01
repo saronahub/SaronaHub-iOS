@@ -33,11 +33,6 @@ class SchedulePagerTabStripViewController: ButtonBarPagerTabStripViewController 
     override func viewControllersForPagerTabStrip(_ pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         var viewControllersForPagerTabStrip: [ViewControllerForPagerTabStrip] = []
         if let storyboard = self.storyboard {
-            if let openSpaceViewController = storyboard.instantiateViewController(withIdentifier: "RoomEvents") as? RoomEventsViewController {
-                openSpaceViewController.itemInfo.title = "המרחב הפתוח"
-                openSpaceViewController.roomType = .openSpace
-                viewControllersForPagerTabStrip.append(openSpaceViewController)
-            }
             if let aquariumViewController = storyboard.instantiateViewController(withIdentifier: "RoomEvents") as? RoomEventsViewController {
                 aquariumViewController.itemInfo.title = "האקווריום"
                 aquariumViewController.roomType = .aquarium
@@ -47,6 +42,11 @@ class SchedulePagerTabStripViewController: ButtonBarPagerTabStripViewController 
                 venturesRoomViewController.itemInfo.title = "חדר המיזמים"
                 venturesRoomViewController.roomType = .ventures
                 viewControllersForPagerTabStrip.append(venturesRoomViewController)
+            }
+            if let openSpaceViewController = storyboard.instantiateViewController(withIdentifier: "RoomEvents") as? RoomEventsViewController {
+                openSpaceViewController.itemInfo.title = "המרחב הפתוח"
+                openSpaceViewController.roomType = .openSpace
+                viewControllersForPagerTabStrip.append(openSpaceViewController)
             }
         }
         pagerTabStripController.moveToViewControllerAtIndex(viewControllersForPagerTabStrip.count, animated: false)

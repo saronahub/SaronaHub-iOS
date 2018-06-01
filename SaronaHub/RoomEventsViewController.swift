@@ -83,8 +83,19 @@ class RoomEventsViewController: ViewControllerForPagerTabStrip {
         let _ = request(method: .get, "event", with: nil, { (json) in
             self.events.removeAll()
             switch self.roomType {
+            case .openSpace:
+                if let openSpaceEvents = json["data"]["1"].array {
+                    self.events = fillEvents(openSpaceEvents, roomType: .openSpace)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                        if let refreshControl = self.tableView.refreshControl {
+                            refreshControl.endRefreshing()
+                        }
+                    }
+                }
+                break
             case .aquarium:
-                if let aquariumEvents = json["data"]["1"].array {
+                if let aquariumEvents = json["data"]["2"].array {
                     self.events = fillEvents(aquariumEvents, roomType: .aquarium)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
@@ -95,19 +106,8 @@ class RoomEventsViewController: ViewControllerForPagerTabStrip {
                 }
                 break
             case .ventures:
-                if let venturesEvents = json["data"]["2"].array {
+                if let venturesEvents = json["data"]["3"].array {
                     self.events = fillEvents(venturesEvents, roomType: .ventures)
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                        if let refreshControl = self.tableView.refreshControl {
-                            refreshControl.endRefreshing()
-                        }
-                    }
-                }
-                break
-            case .openSpace:
-                if let openSpaceEvents = json["data"]["3"].array {
-                    self.events = fillEvents(openSpaceEvents, roomType: .openSpace)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                         if let refreshControl = self.tableView.refreshControl {
