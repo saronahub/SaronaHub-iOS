@@ -148,7 +148,11 @@ extension RoomEventsViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        if let storyboard = self.storyboard,
+            let eventTableViewController = storyboard.instantiateViewController(withIdentifier: "EventDetails") as? EventTableViewController,
+            let navigationController = self.navigationController {
+            navigationController.pushViewController(eventTableViewController, animated: true)
+        }
     }
 }
 
@@ -212,10 +216,8 @@ class EventTableViewCell: UITableViewCell {
         self.cardBackgroundView.layer.shadowRadius = 5
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        // do not delete - leave it empty.
-    }
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        super.setHighlighted(highlighted, animated: animated)
         for subview in self.cardBackgroundView.subviews {
             UIView.animate(withDuration: 0.05) {
                 subview.alpha = highlighted ? 0.2 : 1

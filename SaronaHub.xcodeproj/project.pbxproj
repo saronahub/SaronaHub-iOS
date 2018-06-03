@@ -28,6 +28,7 @@
 		2DD2A436208E935A003F40F8 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A431208E935A003F40F8 /* PagerTabStripViewController.swift */; };
 		2DD2A439208E93AC003F40F8 /* SchedulePagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A438208E93AC003F40F8 /* SchedulePagerTabStripViewController.swift */; };
 		2DD2A43B208E93F8003F40F8 /* RoomEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A43A208E93F8003F40F8 /* RoomEventsViewController.swift */; };
+		2DDA43F620C331810052F881 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDA43F520C331810052F881 /* EventTableViewController.swift */; };
 		2DF66C36200AF4AB0052FD67 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF66C35200AF4AB0052FD67 /* RegisterViewController.swift */; };
 		2DFD6E8220039588002424D1 /* OpenSansHebrew-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD6E7A20039585002424D1 /* OpenSansHebrew-LightItalic.ttf */; };
 		2DFD6E8320039588002424D1 /* OpenSansHebrew-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD6E7B20039585002424D1 /* OpenSansHebrew-Italic.ttf */; };
@@ -64,6 +65,7 @@
 		2DD2A431208E935A003F40F8 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripViewController.swift; sourceTree = "<group>"; };
 		2DD2A438208E93AC003F40F8 /* SchedulePagerTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePagerTabStripViewController.swift; sourceTree = "<group>"; };
 		2DD2A43A208E93F8003F40F8 /* RoomEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomEventsViewController.swift; sourceTree = "<group>"; };
+		2DDA43F520C331810052F881 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		2DF66C35200AF4AB0052FD67 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2DFD6E7A20039585002424D1 /* OpenSansHebrew-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-LightItalic.ttf"; sourceTree = "<group>"; };
 		2DFD6E7B20039585002424D1 /* OpenSansHebrew-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-Italic.ttf"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				2D0B37A0208BFD4A003B34C3 /* ProfileTableViewController.swift */,
 				2DD2A438208E93AC003F40F8 /* SchedulePagerTabStripViewController.swift */,
 				2DD2A43A208E93F8003F40F8 /* RoomEventsViewController.swift */,
+				2DDA43F520C331810052F881 /* EventTableViewController.swift */,
 				2D1F843C1FE199EE003DBC81 /* Main.storyboard */,
 				2D1F84411FE199EE003DBC81 /* LaunchScreen.storyboard */,
 				2DB706B7201F832D001B84EA /* Assets.xcassets */,
@@ -251,6 +254,7 @@
 				2DD2A436208E935A003F40F8 /* PagerTabStripViewController.swift in Sources */,
 				2D1F843B1FE199EE003DBC81 /* ViewController.swift in Sources */,
 				2D1F84391FE199EE003DBC81 /* AppDelegate.swift in Sources */,
+				2DDA43F620C331810052F881 /* EventTableViewController.swift in Sources */,
 				2D63985220212C6100AA59D5 /* VisitsHistoryViewController.swift in Sources */,
 				2DD2A433208E935A003F40F8 /* ButtonBarView.swift in Sources */,
 				2DB62F2D205E961900E54B3E /* SetEditProfileViewController.swift in Sources */,
