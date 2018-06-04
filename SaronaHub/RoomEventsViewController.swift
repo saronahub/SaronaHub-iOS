@@ -151,6 +151,9 @@ extension RoomEventsViewController: UITableViewDelegate {
         if let storyboard = self.storyboard,
             let eventTableViewController = storyboard.instantiateViewController(withIdentifier: "EventDetails") as? EventTableViewController,
             let navigationController = self.navigationController {
+            if let cell = tableView.cellForRow(at: indexPath) as? EventTableViewCell {
+                eventTableViewController.event = cell.event
+            }
             navigationController.pushViewController(eventTableViewController, animated: true)
         }
     }
