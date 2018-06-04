@@ -164,34 +164,7 @@ extension RoomEventsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "FloatingCell", for: indexPath) as? EventTableViewCell {
             let event = self.events[indexPath.row]
-            cell.name.text = event.name
-            var startTime: String?
-            var endTime: String?
-            if let startDate = event.startDate {
-                let formatter = DateFormatter()
-                formatter.locale = Locale(identifier: "he_IL")
-                let monthName = formatter.monthSymbols[Calendar.current.component(.month, from: startDate) - 1]
-                let day: Int = Calendar.current.component(.day, from: startDate)
-                cell.dayDate.text = "\(day)"
-                cell.monthDate.text = monthName
-                let components = Calendar.current.dateComponents([.hour, .minute], from: startDate)
-                if let hour = components.hour, let minute = components.minute {
-                    startTime = "\(hour < 10 ? "0\(hour)" : "\(hour)"):\(minute < 10 ? "0\(minute)" : "\(minute)")"
-                }
-            }
-            if let endDate = event.endDate {
-                let components = Calendar.current.dateComponents([.hour, .minute], from: endDate)
-                if let hour = components.hour, let minute = components.minute {
-                    endTime = "\(hour < 10 ? "0\(hour)" : "\(hour)"):\(minute < 10 ? "0\(minute)" : "\(minute)")"
-                }
-            }
-            if let startTime = startTime, let endTime = endTime {
-                cell.timeRange.text = "\(startTime) - \(endTime)"
-            } else if let startTime = startTime {
-                cell.timeRange.text = startTime
-            } else if let endTime = endTime {
-                cell.timeRange.text = endTime
-            }
+            cell.event = event
             return cell
         }
         return UITableViewCell()
@@ -199,6 +172,41 @@ extension RoomEventsViewController: UITableViewDataSource {
 }
 
 class EventTableViewCell: UITableViewCell {
+    
+    var event: Event? {
+        didSet {
+            if let event = self.event {
+                self.name.text = event.name
+                var startTime, endTime: String?
+                if let startDate = event.startDate {
+                    let formatter = DateFormatter()
+                    formatter.locale = Locale(identifier: "he_IL")
+                    let monthName = formatter.monthSymbols[Calendar.current.component(.month, from: startDate) - 1]
+                    let day: Int = Calendar.current.component(.day, from: startDate)
+                    self.dayDate.text = "\(day)"
+                    self.monthDate.text = monthName
+                    let components = Calendar.current.dateComponents([.hour, .minute], from: startDate)
+                    if let hour = components.hour, let minute = components.minute {
+                        startTime = "\(hour < 10 ? "0\(hour)" : "\(hour)"):\(minute < 10 ? "0\(minute)" : "\(minute)")"
+                    }
+                }
+                if let endDate = event.endDate {
+                    let components = Calendar.current.dateComponents([.hour, .minute], from: endDate)
+                    if let hour = components.hour, let minute = components.minute {
+                        endTime = "\(hour < 10 ? "0\(hour)" : "\(hour)"):\(minute < 10 ? "0\(minute)" : "\(minute)")"
+                    }
+                }
+                if let startTime = startTime, let endTime = endTime {
+                    self.timeRange.text = "\(startTime) - \(endTime)"
+                } else if let startTime = startTime {
+                    self.timeRange.text = startTime
+                } else if let endTime = endTime {
+                    self.timeRange.text = endTime
+                }
+            }
+        }
+    }
+    
     @IBOutlet weak var cardBackgroundView: UIView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var dayDate: UILabel!
