@@ -1218,6 +1218,13 @@
                             <outlet property="delegate" destination="R9U-7O-Yq8" id="f69-x9-jtJ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="eventDateLabel" destination="Mm9-wO-mSd" id="npn-5A-pcW"/>
+                        <outlet property="eventDescriptionTextView" destination="LgA-yX-rYh" id="VOj-i4-mra"/>
+                        <outlet property="eventHostLabel" destination="ehh-O7-DDo" id="axF-BD-L33"/>
+                        <outlet property="eventImageView" destination="bKl-Dl-F8t" id="tvd-rt-lEJ"/>
+                        <outlet property="eventNameLabel" destination="dOL-wA-jf6" id="U1s-GU-uJQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VH1-bv-6kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
