@@ -84,4 +84,9 @@ class EventTableViewController: UITableViewController {
         self.eventDescriptionTextView.text = event.description
         self.eventImageView.image = self.image
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.row == 5 ? UITableViewAutomaticDimension : super.tableView(tableView, heightForRowAt: indexPath)
+    }
+    
 }
