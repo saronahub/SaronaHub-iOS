@@ -12,8 +12,6 @@ class EventTableViewController: UITableViewController {
 
     var event: Event?
     
-    var image: UIImage?
-    
     @IBOutlet weak var eventImageView: UIImageView!
     
     @IBOutlet weak var eventNameLabel: UILabel!
@@ -82,10 +80,20 @@ class EventTableViewController: UITableViewController {
         }
         self.eventDateLabel.text = dateText
         self.eventDescriptionTextView.text = event.description
-        self.eventImageView.image = self.image
+        if let imageURL = event.imageURL {
+            URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
+                if error == nil, let data = data {
+                    self.eventImageView.image = UIImage(data: data)
+                    self.tableView.reloadData()
+                }
+            }.resume()
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0, let image = self.eventImageView.image {
+            return (image.size.height / image.size.width) * UIScreen.main.bounds.width
+        }
         return indexPath.row == 5 ? UITableViewAutomaticDimension : super.tableView(tableView, heightForRowAt: indexPath)
     }
     
