@@ -83,8 +83,10 @@ class EventTableViewController: UITableViewController {
         if let imageURL = event.imageURL {
             URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
                 if error == nil, let data = data {
-                    self.eventImageView.image = UIImage(data: data)
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        self.eventImageView.image = UIImage(data: data)
+                        self.tableView.reloadData()
+                    }
                 }
             }.resume()
         }
