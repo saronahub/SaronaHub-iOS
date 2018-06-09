@@ -166,11 +166,33 @@ extension RoomEventsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "FloatingCell", for: indexPath) as? EventTableViewCell {
+            if traitCollection.forceTouchCapability == .available {
+                self.registerForPreviewing(with: self, sourceView: cell)
+            }
             let event = self.events[indexPath.row]
             cell.event = event
             return cell
         }
         return UITableViewCell()
+    }
+}
+extension RoomEventsViewController: UIViewControllerPreviewingDelegate {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard
+            let cell = previewingContext.sourceView as? EventTableViewCell,
+            let storyboard = self.storyboard,
+            let eventTableViewController = storyboard.instantiateViewController(withIdentifier: "EventDetails") as? EventTableViewController
+            else {
+                return nil
+        }
+        eventTableViewController.event = cell.event
+        return eventTableViewController
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(viewControllerToCommit, animated: true)
+        }
     }
 }
 
