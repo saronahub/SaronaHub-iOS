@@ -926,7 +926,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Igr-us-Ybt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="לו״ז המרכז" id="oE6-fW-rcz"/>
+                    <navigationItem key="navigationItem" title="לו״ז המרכז" id="oE6-fW-rcz">
+                        <barButtonItem key="backBarButtonItem" title="" id="TNt-FE-f7u"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonBarView" destination="C0T-4J-2qS" id="P2t-Vx-Re9"/>
                         <outlet property="containerView" destination="qhu-yo-vw0" id="98b-r6-CS9"/>
@@ -1041,10 +1043,10 @@
             </objects>
             <point key="canvasLocation" x="1793" y="-2775"/>
         </scene>
-        <!--Event Table View Controller-->
+        <!--דף האירוע-->
         <scene sceneID="kSW-C4-ssS">
             <objects>
-                <tableViewController storyboardIdentifier="EventDetails" id="R9U-7O-Yq8" customClass="EventTableViewController" customModule="SaronaHub" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EventDetails" title="דף האירוע" id="R9U-7O-Yq8" customClass="EventTableViewController" customModule="SaronaHub" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zda-JV-1Dw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
