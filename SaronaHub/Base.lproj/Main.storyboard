@@ -1059,15 +1059,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="GVo-og-CHq">
+                                                    <rect key="frame" x="177" y="13" width="20" height="18"/>
+                                                </activityIndicatorView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bKl-Dl-F8t">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="bKl-Dl-F8t" secondAttribute="bottom" id="5t0-Mf-vsV"/>
+                                                <constraint firstItem="GVo-og-CHq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l6G-xy-C3e" secondAttribute="leading" constant="8" id="DVI-bs-Jzg"/>
+                                                <constraint firstItem="GVo-og-CHq" firstAttribute="centerY" secondItem="l6G-xy-C3e" secondAttribute="centerY" id="Ddw-Rt-DYM"/>
                                                 <constraint firstAttribute="trailing" secondItem="bKl-Dl-F8t" secondAttribute="trailing" id="E6W-Et-bcS"/>
+                                                <constraint firstItem="GVo-og-CHq" firstAttribute="centerX" secondItem="l6G-xy-C3e" secondAttribute="centerX" id="GW7-SI-zig"/>
+                                                <constraint firstItem="GVo-og-CHq" firstAttribute="top" secondItem="l6G-xy-C3e" secondAttribute="top" constant="13" id="dwV-au-krc"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GVo-og-CHq" secondAttribute="trailing" constant="8" id="eMN-PP-Ggc"/>
                                                 <constraint firstItem="bKl-Dl-F8t" firstAttribute="top" secondItem="l6G-xy-C3e" secondAttribute="top" id="hmZ-CI-KTB"/>
                                                 <constraint firstItem="bKl-Dl-F8t" firstAttribute="leading" secondItem="l6G-xy-C3e" secondAttribute="leading" id="jlV-Rr-Sz2"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GVo-og-CHq" secondAttribute="bottom" constant="4" id="jx3-X5-yqT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.15294117647058825" green="0.22352941176470587" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
@@ -1221,6 +1230,7 @@
                         <outlet property="eventDateLabel" destination="Mm9-wO-mSd" id="npn-5A-pcW"/>
                         <outlet property="eventDescriptionTextView" destination="LgA-yX-rYh" id="VOj-i4-mra"/>
                         <outlet property="eventHostLabel" destination="ehh-O7-DDo" id="axF-BD-L33"/>
+                        <outlet property="eventImageLoadingActivityIndicator" destination="GVo-og-CHq" id="fGZ-40-WMt"/>
                         <outlet property="eventImageView" destination="bKl-Dl-F8t" id="tvd-rt-lEJ"/>
                         <outlet property="eventNameLabel" destination="dOL-wA-jf6" id="U1s-GU-uJQ"/>
                     </connections>

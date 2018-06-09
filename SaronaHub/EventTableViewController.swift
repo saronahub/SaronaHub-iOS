@@ -14,6 +14,8 @@ class EventTableViewController: UITableViewController {
     
     @IBOutlet weak var eventImageView: UIImageView!
     
+    @IBOutlet weak var eventImageLoadingActivityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var eventNameLabel: UILabel!
     
     @IBOutlet weak var eventHostLabel: UILabel!
@@ -86,6 +88,11 @@ class EventTableViewController: UITableViewController {
                     DispatchQueue.main.async {
                         self.eventImageView.image = UIImage(data: data)
                         self.tableView.reloadData()
+                    }
+                }
+                DispatchQueue.main.async {
+                    if self.eventImageLoadingActivityIndicator.isAnimating {
+                        self.eventImageLoadingActivityIndicator.stopAnimating()
                     }
                 }
             }.resume()
